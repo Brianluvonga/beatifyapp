@@ -1,0 +1,192 @@
+/* Custom CSS for additional styling */
+
+/* Center the navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.5s ease
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /* Smooth color transition on hover */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107;
+    /* Change color on hover */
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    /* Add background color on hover */
+    border-radius: 0.25rem;
+    /* Add rounded corners on hover */
+}
+
+.navbar-toggler {
+    border-color: white;
+    /* Change toggle button color to white */
+}
+
+/* .navbar-toggler-icon { */
+/* background-color: white; */
+/* Change toggle icon color to white */
+/* } */
+
+.navbar-nav .nav-link {
+    /* color: white !important;
+    color: #0056b3; */
+    color: rgb(207, 204, 204) !important;
+
+
+    /* Change nav links color to white */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ccc !important;
+    /* Change nav links hover color to light grey */
+}
+
+.navbar.scrolled {
+    background-color: #5468a0f5; /* Change this color to your desired background color */
+  }
+
+
+.homepage-section {
+    position: relative;
+    height: 100vh;
+    /* background-image: url('images/hero2.jpg'); */
+    /* Add your background image URL here */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    /* Choose your preferred font */
+}
+
+/* Custom CSS for additional styling */
+.hero-section {
+    position: relative;
+    /* text-align: center; */
+    overflow: hidden;
+}
+
+.hero-section img {
+    width: 100%;
+    height: 900px;
+    object-fit: cover
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: left;
+}
+
+.headline {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.subheadline {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: rgb(207, 204, 204) !important;
+}
+
+.content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+}
+
+/* Custom CSS for feature section */
+.features-section {
+    padding: 50px 0;
+}
+
+.section-title {
+    margin-bottom: 30px;
+}
+
+.feature-list {
+    margin-bottom: 20px;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+#feature-details {
+    padding: 30px;
+    /* background-color: #007bff; */
+}
+
+/* SUBSCRIBE SECTION */
+/* Custom CSS for styling */
+/* Custom CSS for styling */
+.subscribe-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.subscribe-section .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.subscribe-section p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.subscribe-form {
+    max-width: 400px;
+    /* Adjust width to fit content */
+    margin: 0 auto;
+    display: flex;
+    /* Use flexbox to align items */
+}
+
+.subscribe-form input[type="email"] {
+    flex: 1;
+    /* Take remaining space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    /* Rounded corners on left side */
+}
+
+.subscribe-form button {
+    padding: 10px 5px;
+    /* Adjust button padding */
+    border: none;
+    border-radius: 0 5px 5px 0;
+    /* Rounded corners on right side */
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    font-size: 12px;
+}
+
+.subscribe-form button:hover {
+    background-color: #0056b3;
+}

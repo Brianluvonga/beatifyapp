@@ -48,12 +48,12 @@
 }
 
 .navbar-nav .nav-link:hover {
-    color: #ccc !important;
+    color: #5c5a5a !important;
     /* Change nav links hover color to light grey */
 }
 
 .navbar.scrolled {
-    background-color: #5468a0f5; /* Change this color to your desired background color */
+    background-color: #022c4ef5; /* Change this color to your desired background color */
   }
 
 

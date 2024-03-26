@@ -42,6 +42,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#subscribe-section">subscribe</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#feed">feedback</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -81,6 +84,145 @@
             <div id="feature-details" class="row">
               <!-- Feature details will be populated dynamically by JavaScript -->
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feedback Form -->
+    <div class="features-section" id="feed">
+      <div class="container">
+        <h2 class="section-title">Feedback Section</h2>
+
+        <div class="card feedback-card" id="feed">
+          <div class="card-body">
+            <form
+              id="feedback-form"
+              class="feedback-form"
+              action="#"
+              method="post"
+            >
+              <label for="user-name">Email:</label>
+              <br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                required
+              />
+              <br /><br />
+
+              <label for="rating">Will you be satisfied with the app?</label>
+              <br />
+              <select id="rating" name="rating" class="form-control">
+                <option value="1">Very Dissatisfied</option>
+                <option value="2">Somewhat Dissatisfied</option>
+                <option value="3">Neutral</option>
+                <option value="4">Somewhat Satisfied</option>
+                <option value="5">Very Satisfied</option>
+              </select>
+              <br /><br />
+
+              <label for="rating-reason"
+                >Would you like to share why you gave that rating?
+                (Optional)</label
+              >
+              <br />
+              <textarea
+                id="rating-reason"
+                name="rating-reason"
+                rows="4"
+                cols="50"
+                class="form-control"
+              ></textarea>
+              <br /><br />
+
+              <!-- Feature Feedback -->
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="feature1">Categorise Music:</label>
+                  <br />
+                  <select id="feature1" name="feature1" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  <br /><br />
+                </div>
+                <div class="col-md-6">
+                  <label for="feature2">Train Music:</label>
+                  <br />
+                  <select id="feature2" name="feature2" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  <br /><br />
+                </div>
+                <div class="col-md-6">
+                  <label for="feature2">Auto-Download:</label>
+                  <br />
+                  <select id="feature2" name="feature2" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  <br /><br />
+                </div>
+              </div>
+              <!-- End Feature Feedback -->
+
+              <label for="feature-improvement"
+                >What can we improve about these features? (Optional)</label
+              >
+              <br />
+              <textarea
+                id="feature-improvement"
+                name="feature-improvement"
+                rows="4"
+                cols="50"
+                class="form-control"
+              ></textarea>
+              <br /><br />
+
+              <div id="bug-description" style="display: none">
+                <label for="bug-details"
+                  >Please describe the bug in detail (optional):</label
+                >
+                <br />
+                <textarea
+                  id="bug-details"
+                  name="bug-details"
+                  rows="4"
+                  cols="50"
+                  class="form-control"
+                ></textarea>
+                <br /><br />
+              </div>
+
+              <h3>New Feature Ideas (Optional)</h3>
+              <p>What features would you like to see added to the app?</p>
+              <br />
+              <textarea
+                id="new-feature-ideas"
+                name="new-feature-ideas"
+                rows="4"
+                cols="50"
+                class="form-control"
+              ></textarea>
+              <br /><br />
+
+              <button type="submit" class="btn btn-primary">
+                Submit Feedback
+              </button>
+            </form>
           </div>
         </div>
       </div>

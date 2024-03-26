@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (index === 0) {
             selectedListItem = listItem;
             selectedListItem.classList.add('active');
+            selectedListItem.style.backgroundColor = '#022c4ef5'; // Set background color for the first item
         }
     });
 
@@ -48,15 +49,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to highlight the clicked list item
     function highlightListItem(listItem) {
-        // Remove active class from previously selected list item
+        // Remove active class from previously selected list item and reset background color
         if (selectedListItem) {
             selectedListItem.classList.remove('active');
+            selectedListItem.style.backgroundColor = ''; // Remove background color
         }
-        // Add active class to the clicked list item
+        // Add active class to the clicked list item and set background color
         selectedListItem = listItem;
         selectedListItem.classList.add('active');
+        selectedListItem.style.backgroundColor = '#022c4ef5'; // Set background color
     }
 });
+
+
 
 // scroll section feature
 // Scroll to section when navbar item is clicked
@@ -104,3 +109,21 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', handleScroll);
 });
 
+// feedback form
+
+document.addEventListener('DOMContentLoaded', function () {
+    const feedbackForm = document.getElementById('feedback-form');
+
+    feedbackForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        // You can add your logic here to handle form submission,
+        // such as sending the data to a server or displaying a thank you message.
+
+        // For example, to display a thank you message:
+        alert('Thank you for your feedback!');
+
+        // Reset the form
+        feedbackForm.reset();
+    });
+});

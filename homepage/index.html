@@ -9,6 +9,11 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <link rel="shortcut icon" href="favicon.ico" type="images/logo.png" />
     <!-- Link external style.css -->
     <link rel="stylesheet" href="style.css" />
@@ -27,6 +32,8 @@
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
+          <span class="navbar-close-icon d-none">&times;</span>
+          <!-- Close icon initially hidden -->
         </button>
         <div
           class="collapse navbar-collapse justify-content-center"
@@ -37,13 +44,16 @@
               <a class="nav-link" href="#hero-section">Home</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#about-section">About</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#features-section">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#subscribe-section">subscribe</a>
+              <a class="nav-link" href="#subscribe-section">Subscribe</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#feed">feedback</a>
+              <a class="nav-link" href="#feed">Feedback</a>
             </li>
           </ul>
         </div>
@@ -62,12 +72,62 @@
           Start discovering new music, creating playlists, and sharing your
           favorites with friends.
         </p>
-        <button class="btn btn-primary">Learn More</button>
-        <!-- Using Bootstrap button styling -->
+        <a
+          href="#about-section"
+          class="btn btn-primary"
+          style="text-align: center; background-color: #022c4ef5"
+          >Learn More</a
+        >
       </div>
     </div>
 
-    <!-- Features Section -->
+    <!-- About Section -->
+    <div
+      id="about-section"
+      class="about-section py-5"
+      style="background-color: #333"
+    >
+      <div class="container">
+        <h1 class="mb-5 text-white">Beatify at a Glance</h1>
+
+        <div class="row">
+          <!-- Brief Intro -->
+          <div class="col-lg-4">
+            <div class="about-part mb-4">
+              <h2 class="about-title text-primary mb-3">Brief Intro</h2>
+              <p class="about-text">
+                Beatify is a revolutionary music platform that redefines the way
+                you experience music.
+              </p>
+            </div>
+          </div>
+
+          <!-- Why We Exist -->
+          <div class="col-lg-4">
+            <div class="about-part mb-4">
+              <h2 class="about-title text-success mb-3">Why We Exist</h2>
+              <p class="about-text">
+                We exist to provide personalized recommendations, curated
+                playlists, and seamless integration with your favorite streaming
+                services.
+              </p>
+            </div>
+          </div>
+
+          <!-- Challenge -->
+          <div class="col-lg-4">
+            <div class="about-part mb-4">
+              <h2 class="about-title text-warning mb-3">The Challenge</h2>
+              <p class="about-text">
+                Our challenge is to make music discovery easy and enjoyable for
+                everyone, from casual listeners to music connoisseurs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Features Section -->
     <div id="features-section" class="features-section">
       <div class="container">
@@ -102,7 +162,7 @@
               action="#"
               method="post"
             >
-              <label for="user-name">Email:</label>
+              <label for="email">Email:</label>
               <br />
               <input
                 type="email"
@@ -133,7 +193,7 @@
                 id="rating-reason"
                 name="rating-reason"
                 rows="4"
-                cols="50"
+                cols="30"
                 class="form-control"
               ></textarea>
               <br /><br />
@@ -165,9 +225,9 @@
                   <br /><br />
                 </div>
                 <div class="col-md-6">
-                  <label for="feature2">Auto-Download:</label>
+                  <label for="feature3">Auto-Download:</label>
                   <br />
-                  <select id="feature2" name="feature2" class="form-control">
+                  <select id="feature3" name="feature3" class="form-control">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -187,7 +247,7 @@
                 id="feature-improvement"
                 name="feature-improvement"
                 rows="4"
-                cols="50"
+                cols="30"
                 class="form-control"
               ></textarea>
               <br /><br />
@@ -201,7 +261,7 @@
                   id="bug-details"
                   name="bug-details"
                   rows="4"
-                  cols="50"
+                  cols="30"
                   class="form-control"
                 ></textarea>
                 <br /><br />
@@ -214,12 +274,20 @@
                 id="new-feature-ideas"
                 name="new-feature-ideas"
                 rows="4"
-                cols="50"
+                cols="30"
                 class="form-control"
               ></textarea>
               <br /><br />
 
-              <button type="submit" class="btn btn-primary">
+              <button
+                type="submit"
+                class="btn btn-secondary btn-block"
+                style="
+                  text-align: center;
+                  font-size: 18px;
+                  background-color: #022c4ef5;
+                "
+              >
                 Submit Feedback
               </button>
             </form>
@@ -229,24 +297,29 @@
     </div>
 
     <!-- Subscribe Section -->
-    <div id="subscribe-section" class="subscribe-section">
+    <div id="subscribe-section" class="subscribe-section text-center">
       <div class="container">
         <h2 class="section-title">Subscribe</h2>
         <p>
           Subscribe to our newsletter to receive the latest updates and special
           offers.
         </p>
-        <form class="subscribe-form">
-          <div class="form-row">
-            <div class="col-md-8">
+        <form class="subscribe-form d-inline-block">
+          <div class="form-row justify-content-center">
+            <div class="col-md-8 mb-3 mb-md-0">
               <input
                 type="email"
                 class="form-control"
                 placeholder="Enter your email"
+                required
               />
             </div>
             <div class="col-md-4">
-              <button type="submit" class="btn btn-primary btn-block">
+              <button
+                type="submit"
+                class="btn btn-primary btn-block"
+                style="text-align: center; background-color: #022c4ef5"
+              >
                 Subscribe
               </button>
             </div>

@@ -127,3 +127,10 @@ document.addEventListener('DOMContentLoaded', function () {
         feedbackForm.reset();
     });
 });
+
+
+// Toggle visibility of navbar toggler and close icon
+$('.navbar-toggler').click(function () {
+    $('.navbar-toggler-icon').toggle();
+    $('.navbar-close-icon').toggle();
+});

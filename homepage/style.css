@@ -33,8 +33,8 @@
     /* Change toggle button color to white */
 }
 
-/* .navbar-toggler-icon { */
-/* background-color: white; */
+/* .navbar-toggler-icon {
+    background-color: white; */
 /* Change toggle icon color to white */
 /* } */
 
@@ -48,13 +48,51 @@
 }
 
 .navbar-nav .nav-link:hover {
-    color: #5c5a5a !important;
+    color: #7ec1f8f5 !important;
     /* Change nav links hover color to light grey */
 }
 
 .navbar.scrolled {
     background-color: #022c4ef5;
     /* Change this color to your desired background color */
+}
+
+/* Responsive styling */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        /* background-color: #022c4ef5; */
+        /* Background color for collapsed navbar */
+        border-radius: 0.25rem;
+        justify-content: center;
+        /* Add rounded corners */
+    }
+
+    .navbar-nav .nav-link {
+        color: white !important;
+        /* Change nav links color to white */
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #5c5a5a !important;
+        /* Change nav links hover color to light grey */
+    }
+}
+
+/* Close button styling */
+.navbar-close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.navbar-close-btn span {
+    font-size: 28px;
+}
+
+.navbar-collapse {
+    justify-content: center;
+    /* Center items */
 }
 
 
@@ -92,7 +130,7 @@
 .content {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
     color: white;
     text-align: left;
@@ -118,6 +156,75 @@
     font-size: 1.2rem;
     padding: 10px 30px;
 }
+
+
+
+
+/* about section */
+
+.about-section {
+    position: relative;
+    overflow: hidden;
+    /* text-align: center; */
+    color: white;
+    padding: 100px 0;
+    /* Adjust padding as needed */
+}
+
+.about-section h1 {
+    color: #0056b3;
+}
+
+.about-section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/abt.jpg');
+    /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
+    /* filter: blur(0.1rem); */
+    /* Adjust blur intensity as needed */
+}
+
+.about-part {
+    background-color: #022c4ef5;
+
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+.about-text .section-title {
+    /* font-size: 0.5rem; */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    /* Adjust maximum width as needed */
+    margin: 0 auto 30px;
+    /* Adjust margin as needed */
+}
+
+
 
 /* Custom CSS for feature section */
 .features-section {
@@ -161,7 +268,7 @@
 }
 
 .feedback-card .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .feedback-card .card-title {
@@ -171,7 +278,6 @@
 
 
 /* SUBSCRIBE SECTION */
-/* Custom CSS for styling */
 /* Custom CSS for styling */
 .subscribe-section {
     background-color: #f8f9fa;

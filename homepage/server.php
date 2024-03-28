@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form fields and sanitize input
-    $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+    $email = filter_var($_POST["email"], define('FILTER_SANITIZE_EMAIL', true));
     $rating = $_POST["rating"];
     $ratingReason = $_POST["rating-reason"];
     $feature1 = $_POST["feature1"];

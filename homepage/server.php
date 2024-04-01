@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form fields and sanitize input
-    $email = filter_var($_POST["email"], define('FILTER_SANITIZE_EMAIL', true));
+    $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     $rating = $_POST["rating"];
     $ratingReason = $_POST["rating-reason"];
     $feature1 = $_POST["feature1"];
@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $newFeatureIdeas = $_POST["new-feature-ideas"];
 
     // Set up the email
-    $to = "brnluvonga@gmail.com"; // Replace with your email address
+    $to = "brnluvonga@gmail.com";
     $subject = "Feedback Submission";
     $message = "Email: $email\n\n";
     $message .= "Rating: $rating\n";

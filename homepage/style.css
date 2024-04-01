@@ -33,9 +33,9 @@
     /* Change toggle button color to white */
 }
 
-/* .navbar-toggler-icon {
-    background-color: white; */
-/* Change toggle icon color to white */
+/* .navbar-toggler-icon { */
+    /* background-color: black; */
+    /* Change toggle icon color to white */
 /* } */
 
 .navbar-nav .nav-link {
@@ -83,7 +83,8 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: white;
+    color: black;
+    font-size: 24px;
 }
 
 .navbar-close-btn span {
@@ -95,6 +96,9 @@
     text-align: center;
 }
 
+.navbar-toggler[aria-expanded="true"] .navbar-close-icon {
+    display: block;
+}
 
 .homepage-section {
     position: relative;
@@ -257,6 +261,7 @@
     padding: 30px 0;
     background-color: #f2f7fc;
 }
+
 .feedback-container {
     background-color: #f8f9fa;
     /* Background color for the container */

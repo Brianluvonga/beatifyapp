@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Array of features with title and description
     const features = [
-        { title: 'Categorise Music', description: 'App lets you organize music based on the genre and artist but also provides personalized recommendations based on your listening history, ensuring you never miss out on the perfect track.' },
-        { title: 'Train Music', description: 'Elevate your music journey with our revolutionary playlist creation feature powered by cutting-edge music analysis technology. Our platform delves deep into your music preferences, extracting key features and scanning vast music datasets from the internet to uncover unique and undiscovered gems.' },
+        { title: 'Categorise Music', description: 'App lets you organize music based on the genre and artist but also provides personalized recommendations based on your listening history, ensuring you never miss out on the latest uploaded track.' },
+        { title: 'Train Music', description: 'Be your own driver, customise your music genre samples with your favourite song samples, let the app analysis and fetch clues to your song samples. The app delves deep into your music preferences, extracting key features and scanning vast music datasets from the internet to uncover unique and undiscovered gems.' },
         { title: 'Auto-Download', description: 'Immerse yourself in a world of limitless musical discovery with our auto-download feature. As soon as new music that aligns with your refined preferences, as identified through our sophisticated analysis, becomes available, it is automatically downloaded to your device. Seamlessly integrating with your personalized music library, this feature ensures that you are always at the forefront of musical innovation, with fresh tracks and emerging artists at your fingertips, ready to enrich your listening experience at a moments notice' }
     ];
 

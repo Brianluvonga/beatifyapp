@@ -185,21 +185,25 @@ document.querySelector('.sub-form').addEventListener('submit', function (event) 
     const email = document.querySelector('.sub-input').value;
     const subMessage = document.querySelector('.sub-message');
 
-    fetch('subscribe.php', {
+    fetch('https://api.emailjs.com/api/v1.0/email/send', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'Content-Type': 'application/json'
         },
-        body: new URLSearchParams({ email: email })
+        body: JSON.stringify({
+            service_id: 'your_service_id',
+            template_id: 'your_template_id',
+            user_id: 'your_user_id',
+            template_params: {
+                'email': email,
+                'to_email': 'brnluvonga@gmail.com'
+            }
+        })
     })
-        .then(response => response.text())
-        .then(result => {
-            if (result === 'success') {
+        .then(response => {
+            if (response.status === 200) {
                 subMessage.textContent = 'Thank you for subscribing!';
                 subMessage.classList.add('success');
-            } else if (result === 'invalid') {
-                subMessage.textContent = 'Invalid email address.';
-                subMessage.classList.add('error');
             } else {
                 subMessage.textContent = 'Sorry, there was an error processing your subscription.';
                 subMessage.classList.add('error');

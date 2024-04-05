@@ -151,6 +151,13 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', handleScroll);
 });
 
+// Toggle visibility of navbar toggler and close icon
+$('.navbar-toggler').click(function () {
+    $('.navbar-toggler-icon').toggle();
+    $('.navbar-close-icon').toggle();
+});
+
+
 // feedback form
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -168,13 +175,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // Reset the form
         feedbackForm.reset();
     });
-});
-
-
-// Toggle visibility of navbar toggler and close icon
-$('.navbar-toggler').click(function () {
-    $('.navbar-toggler-icon').toggle();
-    $('.navbar-close-icon').toggle();
 });
 
 

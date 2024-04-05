@@ -1,3 +1,42 @@
+/* .typing-container {
+    display: flex;
+    align-items: center;
+}
+
+.typing-text {
+    overflow: hidden;
+    border-right: 0.15em solid #fff;
+    white-space: nowrap;
+    animation: typing 4s steps(30, end) infinite, blink-caret 0.5s step-end infinite;
+}
+
+.cursor {
+    font-size: 1.2em;
+    animation: blink-caret 0.5s step-end infinite;
+}
+
+.cursor.fade {
+    opacity: 0;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+} */
+
+
+
 .homepage-section {
     position: relative;
     height: 100vh;
@@ -100,10 +139,10 @@
 }
 
 .about-title {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
     transition: color 0.3s ease;
-    padding: 10px 15px;
+    padding: 10px 10px;
     border-radius: 20px;
     display: inline-block;
 }
@@ -273,6 +312,28 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 0 25px 25px 0;
+}
+
+.sub-message {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #022c4ef5;
+}
+
+.sub-message.success {
+    color: green;
+}
+
+.sub-message.error {
+    color: red;
+}
+
+.sub-button:hover {
+    background-color: rgb(248, 119, 141);
+    /* Darker shade on hover */
+    color: #fff;
+    /* Keep text color white on hover */
 }
 
 .rounded-right-0 {

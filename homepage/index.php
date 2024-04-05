@@ -45,25 +45,23 @@
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center justify-content-center">
         <div class="container" data-aos="fade-up">
-
             <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
                 <div class="col-xl-6 col-lg-8">
-                    <h1>Welcome to Beatify</h1>
+                    <h1 class="hero-title">Welcome to Beatify</h1>
                     <p class="subheadline" style="font-size: 18px">Music Beyond Entertaiment</p>
+                    <div class="typing-container">
+                        <h2 id="typingText" class="typing-text" style="font-size: 15px">
+                            <span class="cursor">|</span>
+                        </h2>
 
-                    <h2 style="font-size: 14px">
-                        Start discovering new music as per your taste
-                    </h2>
+                    </div>
                     <br>
-                    <a href="#about-section" class="btn " style="text-align: center; background-color: #022c4ef5; color: wheat">Learn More</a>
-
+                    <a href="#about-section" class="btn" style="text-align: center; background-color: #022c4ef5; color: wheat">Learn More</a>
                 </div>
             </div>
-
-
-
         </div>
     </section><!-- End Hero -->
+
 
 
     <!-- About Section -->
@@ -87,7 +85,7 @@
                         <p class="about-text">
                             Entertainment is vital to beat boredorm, Beatify wants to revolutionise the way we get & personalise our music.
                         </p>
-                        <p>Save the hustle of having to listen to a jam before downloading it.</p>
+                        <p>Save the hustle of having to listen to a jam before downloading or saving it manually.</p>
                     </div>
                 </div>
                 <!-- Challenge -->
@@ -133,16 +131,17 @@
         <div class="sub-container container">
             <h2 class="sub-heading">Subscribe</h2>
             <p class="sub-text">Subscribe to our newsletter to receive the latest updates regarding our app.</p>
-            <form class="sub-form">
+            <form class="sub-form" action="server.php" method="POST">
                 <div class="sub-form-group row justify-content-center">
                     <div class="col-md-8 col-lg-6">
-                        <input type="email" class="sub-input form-control" placeholder="Enter your email" required />
+                        <input type="email" class="sub-input form-control" name="email" placeholder="Enter your email" required>
                     </div>
                     <div class="col-md-4 col-lg-2">
                         <button type="submit" class="sub-button btn btn-primary btn-block">Subscribe</button>
                     </div>
                 </div>
             </form>
+            <div class="sub-message"></div>
         </div>
     </div>
 

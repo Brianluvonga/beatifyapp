@@ -1,7 +1,49 @@
+// header typing effect
+const typingText = document.getElementById('typingText');
+const cursor = document.querySelector('.cursor');
+const textToType = "Pick a genre, add your preferred songs, discover jams as per your listening habits";
+let index = 0;
+let isDeleting = false;
+let currentText = '';
+let speed = 100; // Adjust the typing speed here (lower number = faster)
+
+function typeText() {
+    if (index < textToType.length) {
+        if (!isDeleting) {
+            currentText = textToType.slice(0, ++index);
+            typingText.textContent = currentText;
+        } else {
+            currentText = textToType.slice(0, index--);
+            typingText.textContent = currentText;
+        }
+        cursor.classList.remove('fade');
+    } else {
+        isDeleting = true;
+        cursor.classList.add('fade');
+    }
+
+    if (isDeleting && index === -1) {
+        isDeleting = false;
+        index = 0;
+    }
+
+    setTimeout(typeText, speed);
+}
+
+typeText();
+
+// Cursor blinking effect
+setInterval(() => {
+    cursor.classList.toggle('fade');
+}, 500);
+// end of typing effect
+
+
+// feature section
 document.addEventListener('DOMContentLoaded', function () {
     // Array of features with title and description
     const features = [
-        { title: 'Categorise Music', description: 'App lets you organize music based on the genre and artist but also provides personalized recommendations based on your listening history, ensuring you never miss out on the latest uploaded track.' },
+        { title: 'Categorise Music', description: 'App lets you organize music based on the genre you prefer, it lets you add your preferred genres ensuring you never miss out on the latest uploaded tracks.' },
         { title: 'Train Music', description: 'Be your own driver, customise your music genre samples with your favourite song samples, let the app analysis and fetch clues to your song samples. The app delves deep into your music preferences, extracting key features and scanning vast music datasets from the internet to uncover unique and undiscovered gems.' },
         { title: 'Auto-Download', description: 'Immerse yourself in a world of limitless musical discovery with our auto-download feature. As soon as new music that aligns with your refined preferences, as identified through our sophisticated analysis, becomes available, it is automatically downloaded to your device. Seamlessly integrating with your personalized music library, this feature ensures that you are always at the forefront of musical innovation, with fresh tracks and emerging artists at your fingertips, ready to enrich your listening experience at a moments notice' }
     ];
@@ -133,4 +175,38 @@ document.addEventListener('DOMContentLoaded', function () {
 $('.navbar-toggler').click(function () {
     $('.navbar-toggler-icon').toggle();
     $('.navbar-close-icon').toggle();
+});
+
+
+// subscription section
+document.querySelector('.sub-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const email = document.querySelector('.sub-input').value;
+    const subMessage = document.querySelector('.sub-message');
+
+    fetch('subscribe.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams({ email: email })
+    })
+        .then(response => response.text())
+        .then(result => {
+            if (result === 'success') {
+                subMessage.textContent = 'Thank you for subscribing!';
+                subMessage.classList.add('success');
+            } else if (result === 'invalid') {
+                subMessage.textContent = 'Invalid email address.';
+                subMessage.classList.add('error');
+            } else {
+                subMessage.textContent = 'Sorry, there was an error processing your subscription.';
+                subMessage.classList.add('error');
+            }
+        })
+        .catch(error => {
+            subMessage.textContent = 'Sorry, there was an error processing your subscription.';
+            subMessage.classList.add('error');
+        });
 });

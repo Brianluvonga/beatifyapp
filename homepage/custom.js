@@ -1,3 +1,16 @@
+// loader element
+
+window.addEventListener('load', function () {
+    const loader = document.getElementById('loader');
+    loader.style.opacity = '0';
+    setTimeout(function () {
+        loader.style.display = 'none';
+    }, 1500);
+});
+
+
+
+
 // header typing effect
 const typingText = document.getElementById('typingText');
 const cursor = document.querySelector('.cursor');
@@ -43,9 +56,9 @@ setInterval(() => {
 document.addEventListener('DOMContentLoaded', function () {
     // Array of features with title and description
     const features = [
-        { title: 'Categorise Music', description: 'App lets you organize music based on the genre you prefer, it lets you add your preferred genres ensuring you never miss out on the latest uploaded tracks.' },
-        { title: 'Train Music', description: 'Be your own driver, customise your music genre samples with your favourite song samples, let the app analysis and fetch clues to your song samples. The app delves deep into your music preferences, extracting key features and scanning vast music datasets from the internet to uncover unique and undiscovered gems.' },
-        { title: 'Auto-Download', description: 'Immerse yourself in a world of limitless musical discovery with our auto-download feature. As soon as new music that aligns with your refined preferences, as identified through our sophisticated analysis, becomes available, it is automatically downloaded to your device. Seamlessly integrating with your personalized music library, this feature ensures that you are always at the forefront of musical innovation, with fresh tracks and emerging artists at your fingertips, ready to enrich your listening experience at a moments notice' }
+        { title: 'Categorise Music', description: 'App lets you add and organize music based on the genres you prefer.' },
+        { title: 'Train Music', description: 'Be your own driver, customise your genres with song samples that best suit your listening habits, let the app analysis and fetch clues to your song samples, it then performs scanning on vast music datasets from the internet to uncover jams that match your preferred samples.' },
+        { title: 'Auto-Download', description: 'Well, music downloading is a repetitive task. We want to make this a success. As soon as new music that aligns with your refined preferences, as identified through our sophisticated analysis, becomes available, it is automatically downloaded to your device. \n\n This feature ensures that you are always at the forefront of music discovery, with fresh tracks to keep the entertainment going.' }
     ];
 
     const featureNames = document.getElementById('feature-names');

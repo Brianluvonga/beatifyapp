@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const features = [
         { title: 'Categorise Music', description: 'App lets you add and organize music based on the genres you prefer.' },
         { title: 'Train Music', description: 'Be your own driver, customise your genres with song samples that best suit your listening habits, let the app analysis and fetch clues to your song samples, it then performs scanning on vast music datasets from the internet to uncover jams that match your preferred samples.' },
-        { title: 'Auto-Download', description: 'Well, music downloading is a repetitive task. We want to make this a success. As soon as new music that aligns with your refined preferences, as identified through our sophisticated analysis, becomes available, it is automatically downloaded to your device. \n\n This feature ensures that you are always at the forefront of music discovery, with fresh tracks to keep the entertainment going.' }
+        { title: 'Auto-Download', description: 'Well, music downloading is a repetitive task. We want to make this a success. As soon as new music that aligns with your refined preferences, as identified through our sophisticated analysis, becomes available, it is automatically downloaded to your device. \nThis feature ensures that you are always at the forefront of music discovery, with fresh tracks to keep the entertainment going.' }
     ];
 
     const featureNames = document.getElementById('feature-names');
